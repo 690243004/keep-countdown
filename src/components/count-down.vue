@@ -10,7 +10,7 @@
 							<!-- 内接圆  -->
 							<circle v-bind="innerAttrs"></circle>
 						</svg>
-						<div v-if="theSchond > 0" class="percent-text">{{theSchond}}</div>
+						<div v-if="theSchond > 0" class="percent-text">{{Math.ceil(theSchond)}}</div>
 					</div>
 				</div>
 			</div>
@@ -124,7 +124,7 @@ export default {
 				transform: translate(5px, 5px);
 				&:last-child {
 					stroke: #21cf90;
-					transition: all 0.5s linear;
+					transition: all 0.1s linear;
 					position: absolute;
 					transform: translate(5px, -5px) rotate(-90deg);
 					transform-origin: center center;

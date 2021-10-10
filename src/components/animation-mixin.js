@@ -16,13 +16,13 @@ const rm2 = () => {
 export default {
   methods: {
     async run() {
-      if (this.second > 0) {
+      if (this.theSchond > 0) {
         await rm2();
         this.timer = setTimeout(() => {
-          this.theSchond--;
+          this.theSchond = (this.theSchond - 0.1).toFixed(1);
           this.$emit("change", this.theSchond);
           this.run();
-        }, 1000);
+        }, 100);
       } else {
         this.$emit("end");
       }
